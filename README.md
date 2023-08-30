@@ -19,7 +19,7 @@ V3_TOKEN
 BASE_URL
 GRANT_ID
 CALENDAR_ID
-TOKEN_SECRET
+CLIENT_SECRET
 ```
 
 ### Install dependencies
