@@ -1,45 +1,48 @@
-# code-sample-description
-This sample repo will show you how to easily do X with Nylas.
+# kotlin-read-webhooks
+
+This sample will show you to read webhooks using the Nylas Kotlin SDK.
 
 ## Setup
 
+You need a web server capable of running Java code. [Qoddi](https://app.qoddi.com/login.php) is a great option.
+
 ### System dependencies
 
-- Add System dependencies
+Handled by the web server.
 
 ### Gather environment variables
 
-You'll need the following values from the Nylas Dashboard:
+You'll need to create the following environment values:
 
 ```text
-ACCESS_TOKEN = ""
-CLIENT_ID = ""
-CLIENT_SECRET = ""
+V3_TOKEN
+BASE_URL
+GRANT_ID
+CALENDAR_ID
+TOKEN_SECRET
 ```
-
-Add the above values to a `.env` file.
-
-The `.env` file is added to `.gitignore`. Ensure to store these values securely.
 
 ### Install dependencies
 
-[replace with install steps]
+Everything is on the POM.xml file, but here they are:
+
 ```bash
-$ npm i
+org.slf4j / slf4j-simple / 2.0.7
+org.slf4j / slf4j-api / 2.0.7
+com.nylas.sdk / nylas / 2.0.0-beta.1
+io.github.cdimascio / dotenv-java / 2.3.2
+com.sparkjava / spark-kotlin / 1.0.0-alpha
+com.sparkjava / spark-template-mustache / 2.7.1
+com.github.spullara.mustache.java / compiler / 0.9.4
+com.fasterxml.jackson.module / jackson-module-kotlin / 2.14.2
 ```
+
+# Compilation
+
+Clone this repo and use it as the source for your web server compilation
 
 ## Usage
 
-The recommended way to use this sample is ...
+Run the generated web page.
 
-You can also clone the repository ...
-
-You'll find more detailed instructions ...
-
-## Get support
-
-If you found a bug or want to suggest a new [feature/use case/sample], please file an issue.
-
-## Learn more
-
-Visit our [Nylas documentation](https://developer.nylas.com/) to learn more.
+If successful, you will start to see all your incoming webhooks
