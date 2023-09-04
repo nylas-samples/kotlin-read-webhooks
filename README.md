@@ -1,6 +1,6 @@
 # kotlin-read-webhooks
 
-This sample will show you to read webhooks using the Nylas Kotlin SDK.
+This sample will show you to read webhooks using the Nylas Kotlin/Java SDK.
 
 ## Setup
 
