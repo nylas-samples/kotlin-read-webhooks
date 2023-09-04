@@ -88,7 +88,7 @@ fun main(args: Array<String>) {
         val mapper = jacksonObjectMapper()
         // Read the response body as a Json object
         val model: JsonNode = mapper.readValue<JsonNode>(request.body())
-        // Make sure we reading our calendar
+        // Make sure we're reading our calendar
         if(model["data"]["object"]["calendar_id"].textValue().equals(System.getenv("CALENDAR_ID"), false)){
             // Make sure the webhook is coming from Nylas
             if(Hmac.digest(request.body(), URLEncoder.encode(System.getenv("CLIENT_SECRET"), "UTF-8")) == request.headers("X-Nylas-Signature").toString()){
